@@ -35,7 +35,11 @@ mongoose.connection.on("connected", () => {
 // });
 
 // the middleware used for receiving the data as json
-app.use(cors());
+app.use(cors({
+  origin: "https://luxury-inn-frontend.vercel.app", // Allow your frontend origin
+  methods: ["GET", "POST", "PUT", "DELETE"], // Specify the allowed methods
+  credentials: true // Allow credentials if needed (cookies, etc.)
+}));
 app.use(cookieParser());
 app.use(express.json());
 
