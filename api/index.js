@@ -30,15 +30,12 @@ mongoose.connection.on("connected", () => {
   console.log("mongoDB connected");
 });
 
-// app.get("/", (req, res) => {
-//   res.send("hello first req");
-// });
 
 // the middleware used for receiving the data as json
 app.use(cors({
-  origin: "https://luxury-inn-frontend.vercel.app", // Allow your frontend origin
-  methods: ["GET", "POST", "PUT", "DELETE"], // Specify the allowed methods
-  credentials: true // Allow credentials if needed (cookies, etc.)
+  origin: "https://luxury-inn-frontend.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
 }));
 app.use(cookieParser());
 app.use(express.json());

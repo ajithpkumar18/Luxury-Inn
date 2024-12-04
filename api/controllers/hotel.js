@@ -19,7 +19,7 @@ export const updateHotel = async (req, res) => {
       {
         $set: req.body,
       },
-      //
+
       { new: true }
     );
     res.status(200).json(updatedHotel);
@@ -38,11 +38,6 @@ export const deleteHotel = async (req, res) => {
 };
 
 export const searchHotel = async (req, res, next) => {
-
-  // const failed=true;
-  // const err=new Error();
-  // err.status=404;
-  // err.message="Sorry not found";
 
   try {
     const hotel = await Hotel.findById(req.params.id);
@@ -75,7 +70,6 @@ export const countByCity = async (req, res, next) => {
   try {
     const list = await Promise.all(
       cities.map((city) => {
-        // return Hotel.find({city:city}).length
         return Hotel.countDocuments({ city: city });
       })
     );
