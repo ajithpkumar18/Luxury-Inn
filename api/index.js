@@ -42,7 +42,7 @@ app.use(express.json());
 
 // middlewares
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.status(200).json("Hello")
 })
 
@@ -62,7 +62,4 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(8800, () => {
-  connect();
-  console.log("connected to backend");
-});
+module.exports = app;
