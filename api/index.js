@@ -36,7 +36,7 @@ mongoose.connection.on("connected", () => {
 
 // the middleware used for receiving the data as json
 app.use(cors({
-  origin:["https://luxury-inn-frontend.vercel.app/"],
+  origin:["https://luxury-inn-frontend.vercel.app"],
   methods:"POST", "GET"],
   credentials:true
 }));
