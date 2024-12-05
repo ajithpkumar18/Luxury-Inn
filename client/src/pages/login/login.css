@@ -1,15 +1,16 @@
 body{
     background: whitesmoke;
+     height: 40vh;
 }
 .login{
-    height: 90vh;
+   
     width: 100%;
 }
 
 .lContainer{
-    margin: 20% auto;
+    margin: 15% auto;
     width: 30%;
-    height: 35vh;
+    height: 40vh;
     background: white ;
     border-radius: 4%;
     display: flex;
@@ -20,7 +21,11 @@ body{
 
 input{
     padding: 10px;
-    border-radius: 4%;
+    border-radius: 5%;
+    border: 1px solid gray;
+}
+
+input:focus{
     border: 1px solid gray;
 }
 

@@ -23,7 +23,11 @@ const Login = () => {
         setLoading(true)
         try {
             const res = await axios.post("https://luxury-inn.onrender.com/api/auth/register", credentials);
-            if (res.success) {
+            console.log(res);
+            console.log(res.data.succes);
+            // console.log(res);
+
+            if (res.data.succes) {
                 navigate("/login");
             }
             else {
@@ -37,8 +41,9 @@ const Login = () => {
     };
 
     return (
-        <div className="login">
-            <div className="lContainer">
+        <div className="register">
+            <div className="rContainer">
+                <h1>Register</h1>
                 <input
                     type="email"
                     placeholder="email"

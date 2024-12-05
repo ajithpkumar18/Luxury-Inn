@@ -1,12 +1,12 @@
 body{
     background: whitesmoke;
 }
-.login{
+.regsiter{
     height: 90vh;
     width: 100%;
 }
 
-.lContainer{
+.rContainer{
     margin: 20% auto;
     width: 30%;
     height: 35vh;
