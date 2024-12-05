@@ -6,6 +6,7 @@ import List from "./pages/list/List";
 import Hotel from "./pages/Hotel/hotel";
 import setupLocatorUI from "@locator/runtime";
 import Login from "./pages/login/Login";
+import Register from "./pages/register/Register"
 
 if (process.env.NODE_ENV === "development") {
   setupLocatorUI();
@@ -18,6 +19,7 @@ function App() {
         <Route path="/hotels" element={<List />} />
         <Route path="/hotels/:id" element={<Hotel />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   );
