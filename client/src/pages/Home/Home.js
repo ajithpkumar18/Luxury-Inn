@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "./home.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/header/Header";
@@ -7,8 +7,21 @@ import PropertyList from "../../components/propertList/propertyList";
 import FeaturedProperties from "../../components/featuredProperties/featuredProperties";
 import MailList from "../../components/mailList/mailList";
 import Footer from "../../components/footer/footer";
-
+import { AuthContext } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const { user } = useContext(AuthContext);
+
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    if (user == null) {
+      navigate("/login");
+    }
+
+  }, [user])
+
+
   return (
     <div>
       <Navbar />
