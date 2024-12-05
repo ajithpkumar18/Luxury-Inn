@@ -55,7 +55,7 @@ export const getHotels = (async (req, res) => {
       ...(featured && { featured: featured === "true" }),
       cheapestPrice: {
         $gt: min ? parseInt(min) - 1 : 1,
-        $lt: parseInt(max) || 999
+        $lt: parseInt(max) || 100000
       }
     }).limit(parseInt(limit));
 
