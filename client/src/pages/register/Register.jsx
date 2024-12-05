@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./register.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Login = () => {
     const [credentials, setCredentals] = useState({
@@ -43,7 +43,7 @@ const Login = () => {
     return (
         <div className="register">
             <div className="rContainer">
-                <h1>Register</h1>
+                <h1 className="h">Register</h1>
                 <input
                     type="email"
                     placeholder="email"
@@ -71,6 +71,7 @@ const Login = () => {
                 <button disabled={loading} onClick={handleClick} className="lButton">
                     Register
                 </button>
+                <Link to={"/login"} className="alreadyReg">Already Registered ?</Link>
                 {notsuccess && <span>{"Try again"}</span>}
             </div>
         </div>

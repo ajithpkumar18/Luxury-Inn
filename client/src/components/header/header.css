@@ -39,11 +39,13 @@
   }
   
   .headerBtn {
-    background-color: #0071c2;
+    background-color: #0071c2f6;
     color: white;
     font-weight: 500;
     border: none;
     padding: 10px;
+    width: 10em;
+    border-radius: 5px;
     cursor: pointer;
   }
   

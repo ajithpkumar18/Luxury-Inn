@@ -18,7 +18,7 @@ function Navbar() {
           `Welcome ${user.username}`
         ) : (
           <div className="navItems">
-            <button className="navButton">Register</button>
+            <button onClick={() => navigate("/register")} className="navButton">Register</button>
             <button onClick={() => navigate("/login")} className="navButton">Login</button>
           </div>
         )}

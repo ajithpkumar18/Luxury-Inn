@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import "./login.css";
 import { AuthContext } from "../../context/AuthContext";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Login = () => {
   const [credentials, setCredentals] = useState({
@@ -34,7 +34,7 @@ const Login = () => {
   return (
     <div className="login">
       <div className="lContainer">
-        <h1>Login</h1>
+        <h1 className="h">Login</h1>
         <input
           type="text"
           placeholder="username"
@@ -54,6 +54,7 @@ const Login = () => {
         <button disabled={loading} onClick={handleClick} className="lButton">
           Login
         </button>
+        <Link to={"/register"} className="notReg">Not Registered ?</Link>
         {error && <span>{error.message}</span>}
       </div>
     </div>

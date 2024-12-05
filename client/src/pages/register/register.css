@@ -1,15 +1,15 @@
-body{
-    background: whitesmoke;
-}
 .regsiter{
-    height: 90vh;
     width: 100%;
 }
 
+.h{
+    color: #003580;
+}
+
 .rContainer{
-    margin: 20% auto;
+    margin: 10% auto;
     width: 30%;
-    height: 35vh;
+    height: 40vh;
     background: white ;
     border-radius: 4%;
     display: flex;
@@ -20,11 +20,20 @@ body{
 
 input{
     padding: 10px;
-    border-radius: 4%;
+    border-radius: 5px;
     border: 1px solid gray;
+    width: 50%;
 }
 
 button{
-    padding: 5px;
+    padding: 7px;
     width: 35%;
+    border-radius: 5px;
+    background: #01419bd5;
+    color: white;
+}
+
+.alreadyReg{
+    text-decoration: none;
+    color:#003580
 }
