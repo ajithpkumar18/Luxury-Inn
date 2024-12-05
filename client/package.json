@@ -49,5 +49,5 @@
     "@locator/babel-jsx": "^0.2.4",
     "@locator/runtime": "^0.2.4"
   },
-  "proxy": "https://luxury-inn-backend.vercel.app/"
+  "proxy": "https://luxury-inn.onrender.com/api/"
 }
